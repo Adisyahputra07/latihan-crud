@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit-Food</title>
+    <%-include('./component/bootstrap.ejs') %>
+    <link rel="stylesheet" href="stylesheet/style.css" />
+  </head>
+  <body>
+    <%- include("./component/navbar.ejs") %>
+    <div class="container-include">
+      <h2 class="text-center">Edit Foods</h2>
+      <% if (result.length){ for(let i = 0; i< result.length; i++){ %>
+      <form action="/process-edit-food/<%= result[i].id%>" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label"> Name</label>
+          <input type="hidden" class="form-control" name="id" id="name" value="<%= result[i].id%>" />
+          <input type="text" class="form-control" name="name" id="name" value="<%= result[i].name%>" />
+        </div>
+        <div class="mb-3">
+          <label for="stok" class="form-label">Stok</label>
+          <input type="number" class="form-control" name="stok" id="stok" value="<%= result[i].stok%>" />
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">image</label>
+          <input type="text" class="form-control" name="image" id="image" value="<%= result[i].image%>" />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control" name="description" id="description" value="<%= result[i].description%>" />
+        </div>
+        <button type="submit" class="btn btn-primary d-flex mx-auto">Submit</button>
+      </form>
+      <% }} %>
+    </div>
+  </body>
+</html>

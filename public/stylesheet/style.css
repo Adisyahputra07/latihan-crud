@@ -6,19 +6,11 @@
   max-width: 100%;
 }
 
-.container-category {
-  width: 500px;
-  text-align: center;
-  padding: 50px;
-  background-color: rgb(163, 146, 146);
-  margin: 30px auto;
-  border-radius: 8px;
-}
-
-.container-foods {
+.container-include {
   width: 500px;
   padding: 50px;
-  background-color: rgb(163, 146, 146);
+  background-color: #ffc107;
+  border-color: #ffc107;
   margin: 30px auto;
   border-radius: 8px;
 }

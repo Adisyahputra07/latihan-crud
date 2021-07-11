@@ -23,48 +23,20 @@
             </div>
           </div>
           <div class="row">
+            <% for (let i = 0; i < result.length; i++) { if(result[i].category_name=='makanan kering'){ %>
             <div class="col-3">
               <div class="card">
-                <img src="img/kering6.jpg" class="card-img-top" alt="pepes" />
+                <img src="img/<%= result[i].image%> " class="card-img-top" alt="pepes" style="width: auto; height: 220px; object-fit: cover" />
                 <div class="card-body">
-                  <h5 class="card-title">pepes</h5>
-                  <p class="card-text">Stok :</p>
+                  <h5 class="card-title"><%= result[i].name %></h5>
+                  <p class="card-text">Stok : <%= result[i].stok %></p>
                   <a href="#" class="btn btn-primary">buy</a>
+                  <a href="/edit-food/<%= result[i].id%>" class="btn btn-warning" style="margin-right: 10px"> Edit </a>
+                  <a href="process-delete-food/<%= result[i].id %>" class="btn btn-danger">delet</a>
                 </div>
               </div>
             </div>
-
-            <div class="col-3">
-              <div class="card">
-                <img src="img/kering6.jpg" class="card-img-top" alt="pepes" />
-                <div class="card-body">
-                  <h5 class="card-title">pepes</h5>
-                  <p class="card-text">Stok :</p>
-                  <a href="#" class="btn btn-primary">buy</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="card">
-                <img src="img/kering6.jpg" class="card-img-top" alt="pepes" />
-                <div class="card-body">
-                  <h5 class="card-title">pepes</h5>
-                  <p class="card-text">Stok :</p>
-                  <a href="#" class="btn btn-primary">buy</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="card">
-                <img src="img/kering6.jpg" class="card-img-top" alt="pepes" />
-                <div class="card-body">
-                  <h5 class="card-title">pepes</h5>
-                  <p class="card-text">Stok :</p>
-                  <a href="#" class="btn btn-primary">buy</a>
-                </div>
-              </div>
-            </div>
+            <% } } %>
           </div>
         </div>
       </section>
@@ -77,48 +49,20 @@
             </div>
           </div>
           <div class="row">
+            <% for (let i = 0; i < result.length; i++) { if(result[i].category_name=='makanan kuah'){ %>
             <div class="col-3">
               <div class="card">
-                <img src="img/basah1.jpg" class="card-img-top" alt="soto" />
+                <img src="img/<%= result[i].image %>" class="card-img-top" alt="pepes" style="width: auto; height: 220px; object-fit: cover" />
                 <div class="card-body">
-                  <h5 class="card-title">Soto</h5>
-                  <p class="card-text">Stok :</p>
+                  <h5 class="card-title"><%= result[i].name %></h5>
+                  <p class="card-text">Stok : <%= result[i].stok %></p>
                   <a href="#" class="btn btn-primary">buy</a>
+                  <a href="/edit-food/<%= result[i].id%>" class="btn btn-warning" style="margin-right: 10px"> Edit </a>
+                  <a href="process-delete-food/<%= result[i].id %>" class="btn btn-danger">delet</a>
                 </div>
               </div>
             </div>
-
-            <div class="col-3">
-              <div class="card">
-                <img src="img/basah1.jpg" class="card-img-top" alt="soto" />
-                <div class="card-body">
-                  <h5 class="card-title">Soto</h5>
-                  <p class="card-text">Stok :</p>
-                  <a href="#" class="btn btn-primary">buy</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="card">
-                <img src="img/basah1.jpg" class="card-img-top" alt="soto" />
-                <div class="card-body">
-                  <h5 class="card-title">Soto</h5>
-                  <p class="card-text">Stok :</p>
-                  <a href="#" class="btn btn-primary">buy</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="card">
-                <img src="img/basah1.jpg" class="card-img-top" alt="soto" />
-                <div class="card-body">
-                  <h5 class="card-title">Soto</h5>
-                  <p class="card-text">Stok :</p>
-                  <a href="#" class="btn btn-primary">buy</a>
-                </div>
-              </div>
-            </div>
+            <% } } %>
           </div>
         </div>
       </section>
